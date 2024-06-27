@@ -485,6 +485,7 @@ code {
 .global-cta {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: "Inter Tight", sans-serif !important;
 }
 .global-cta svg circle,
 .global-cta svg path {
