@@ -874,4 +874,12 @@ code {
 			margin-top: 0;
 		}
 	}
+
+    .w-richtext figure.w-richtext-align-floatleft {
+        margin: 0 32px 0 0;
+
+        img {
+            padding: 0;
+        }
+    }
 }

@@ -781,3 +781,9 @@ code {
 .blog-content p:first-of-type {
   margin-top: 0;
 }
+.blog-content .w-richtext figure.w-richtext-align-floatleft {
+  margin: 0 32px 0 0;
+}
+.blog-content .w-richtext figure.w-richtext-align-floatleft img {
+  padding: 0;
+}
