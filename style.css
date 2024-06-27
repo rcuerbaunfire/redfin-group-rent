@@ -771,8 +771,3 @@ code {
   font-weight: 600;
   text-decoration: none !important;
 }
-
-.transition-fade,
-.transition-top {
-  visibility: hidden;
-}
