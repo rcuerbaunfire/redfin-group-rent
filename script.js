@@ -1261,4 +1261,5 @@ $(document).ready(function () {
     removeEmpties();
     blogCleanup();
     refresh(true);
+    fixMKTOFormButtons();
 });
