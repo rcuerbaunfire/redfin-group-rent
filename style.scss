@@ -881,5 +881,9 @@ code {
         img {
             padding: 0;
         }
+
+        @media only screen and (max-width: 990px) {
+            margin: 0 24px 0 0;
+        }
     }
 }
