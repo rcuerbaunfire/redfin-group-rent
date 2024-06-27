@@ -753,8 +753,11 @@ code {
 .blog-details h2,
 .blog-details h3,
 .blog-details h4,
-.blog-details h5 {
+.blog-details h5,
+.blog-details h6 {
   font-weight: normal;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .blog-content div:empty,
@@ -768,7 +771,13 @@ code {
   content: none !important;
 }
 .blog-content a {
-  color: #4561EC !important;
+  color: #4561ec !important;
   font-weight: 600;
   text-decoration: none !important;
+}
+.blog-content p {
+  margin: 16px 0;
+}
+.blog-content p:first-of-type {
+  margin-top: 0;
 }

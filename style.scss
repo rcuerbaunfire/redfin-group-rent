@@ -518,7 +518,7 @@ code {
 
 .global-cta {
 	transition: all 0.3s ease-in-out;
-    font-family: "Inter Tight", sans-serif !important;
+	font-family: "Inter Tight", sans-serif !important;
 
 	svg {
 		circle,
@@ -835,12 +835,17 @@ code {
 	}
 }
 
-.blog-details h1,
-.blog-details h2,
-.blog-details h3,
-.blog-details h4,
-.blog-details h5 {
-	font-weight: normal;
+.blog-details {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+    h6 {
+		font-weight: normal;
+        margin-top: 40px;
+        margin-bottom: 20px;
+	}
 }
 
 .blog-content {
@@ -856,9 +861,17 @@ code {
 		content: none !important;
 	}
 
-    a {
-        color: #4561EC !important;
-        font-weight: 600;
-        text-decoration: none !important;
-    }
+	a {
+		color: #4561ec !important;
+		font-weight: 600;
+		text-decoration: none !important;
+	}
+
+	p {
+		margin: 16px 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+	}
 }
