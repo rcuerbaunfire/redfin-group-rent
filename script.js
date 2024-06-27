@@ -1227,21 +1227,6 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
-    function fixMKTOFormButtons() {
-        setTimeout(() => {
-            const btns = $("button[type='submit'].mktoButton");
-            btns.each(function () {
-                const self = $(this);
-                self.addClass("global-cta");
-                self.removeClass("mktoButton");
-    
-                const text = $('<p class="global-cta-text"></p>').text(self.text());
-                self.empty().append(text);
-                self.append(`<div class="global-cta-icon w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="10" fill="white"></circle><path d="M5 10L14 10" stroke="#4561EC" stroke-width="1.5"></path><path d="M10 6.00002L14 10L10 14" stroke="#4561EC" stroke-width="1.5"></path></svg></div>`)
-            }); 
-        }, 500);
-    }
-
     animatedFade();
     animatedTop();
     nav();
@@ -1263,5 +1248,4 @@ $(document).ready(function () {
     removeEmpties();
     blogCleanup();
     refresh(true);
-    fixMKTOFormButtons();
 });
