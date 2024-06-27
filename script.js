@@ -56,12 +56,12 @@ $(document).ready(function () {
             $('body').imagesLoaded()
                 .always(function (instance) {
                     console.log('all images loaded');
-                })
-                .done(function (instance) {
                     const triggers = ScrollTrigger.getAll();
                     triggers.forEach(trigger => {
                         trigger.refresh(true);
                     });
+                })
+                .done(function (instance) {
                 })
                 .fail(function () {
                     //
