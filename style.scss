@@ -913,22 +913,3 @@ code {
 		justify-content: center;
 	}
 }
-
-.t-modal {
-	.t-modal-inner {
-		opacity: 0;
-		visibility: hidden;
-		transform: translateY(30px);
-		transition: all 0.5s ease-out;
-	}
-
-	&[open] {
-		display: flex;
-
-		.t-modal-inner {
-			opacity: 1;
-			visibility: visible;
-			transform: translateY(0);
-		}
-	}
-}

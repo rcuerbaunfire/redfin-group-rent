@@ -14,12 +14,12 @@ $(document).ready(function () {
                     {
                         y: 0,
                         autoAlpha: 1,
+                        duration: 0.8,
+                        overwrite: true,
+                        ease: Power2.easeOut,
                         scrollTrigger: {
                             trigger: el,
                             start: "top 65%",
-                            duration: 0.8,
-                            overwrite: true,
-                            ease: Power2.easeOut,
                             invalidateOnRefresh: true,
                         },
                     }
@@ -38,12 +38,12 @@ $(document).ready(function () {
                     },
                     {
                         autoAlpha: 1,
+                        duration: 0.8,
+                        overwrite: true,
+                        ease: Power2.easeOut,
                         scrollTrigger: {
                             trigger: el,
                             start: "top 65%",
-                            duration: 0.8,
-                            overwrite: true,
-                            ease: Power2.easeOut,
                             invalidateOnRefresh: true,
                         },
                     }
@@ -776,16 +776,34 @@ $(document).ready(function () {
 
                 if (!modalOpen.length) return;
                 const modalClose = member.find(".t-modal-close, .t-modal-overlay");
-                const modal = member.find(".t-modal")[0];
+                const modal = member.find(".t-modal");
+                const modalInner = member.find(".t-modal-inner");
 
                 modalOpen.click(function () {
                     modal.showModal();
                     bodyEl.addClass("no-scroll");
+
+                    gsap.fromTo(modalInner,
+                        {
+                            autoAlpha: 0,
+                            y: 30,
+                        },
+                        {
+                            y: 0,
+                            duration: 0.8,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                        }
+                    );
                 });
 
                 modalClose.click(function () {
                     modal.close();
                     bodyEl.removeClass("no-scroll");
+
+                    gsap.set(modalInner, {
+                        clearProps: true
+                    });
                 });
             })
         })
