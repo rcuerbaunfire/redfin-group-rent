@@ -776,7 +776,7 @@ $(document).ready(function () {
 
                 if (!modalOpen.length) return;
                 const modalClose = member.find(".t-modal-close, .t-modal-overlay");
-                const modal = member.find(".t-modal");
+                const modal = member.find(".t-modal")[0];
                 const modalInner = member.find(".t-modal-inner");
 
                 modalOpen.click(function () {
