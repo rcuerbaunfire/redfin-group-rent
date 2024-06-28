@@ -909,5 +909,7 @@ code {
 .gcta-container.is-nav.is-mob {
     .global-cta {
         width: 100%;
+        max-width: none;
+        justify-content: center;
     }
 }

@@ -812,4 +812,8 @@ code {
 
 .gcta-container.is-nav.is-mob .global-cta {
   width: 100%;
+  max-width: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
