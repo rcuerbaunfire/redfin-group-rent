@@ -669,6 +669,10 @@ code {
 }
 .navbar_component .pr-link ._12px-text-black.text-gray-300 {
   color: white !important;
+}
+.navbar_component .pr-link ._12px-text-black.text-gray-300,
+.navbar_component .cp-box ._12px-text-black.text-gray-300,
+.navbar_component .pr-card ._12px-text-black.text-gray-300 {
   font-size: 14px;
 }
 .navbar_component .navbar_mob .navbar_mob_inner {

@@ -752,9 +752,16 @@ code {
 
         ._12px-text-black.text-gray-300 {
             color: white !important;
-            font-size: 14px;
         }
 	}
+
+    .pr-link,
+    .cp-box,
+    .pr-card {
+        ._12px-text-black.text-gray-300 {
+            font-size: 14px;
+        }
+    }
 
 	.navbar_mob {
 		.navbar_mob_inner {
