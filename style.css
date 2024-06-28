@@ -823,3 +823,14 @@ code {
   display: -ms-flexbox;
   display: flex;
 }
+.t-modal .t-modal-content::-webkit-scrollbar {
+  width: 10px;
+}
+.t-modal .t-modal-content::-webkit-scrollbar-track {
+  background-color: #4561EC;
+  width: 4px;
+}
+.t-modal .t-modal-content::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
