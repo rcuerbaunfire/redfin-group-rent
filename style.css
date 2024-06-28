@@ -667,6 +667,10 @@ code {
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
+.navbar_component .pr-link ._12px-text-black.text-gray-300 {
+  color: white !important;
+  font-size: 14px;
+}
 .navbar_component .navbar_mob .navbar_mob_inner {
   opacity: 0;
   top: 16px;

@@ -749,6 +749,11 @@ code {
 			transition: opacity 0.3s ease-in-out;
 			opacity: 0;
 		}
+
+        ._12px-text-black.text-gray-300 {
+            color: white !important;
+            font-size: 14px;
+        }
 	}
 
 	.navbar_mob {
