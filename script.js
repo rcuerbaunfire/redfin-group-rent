@@ -790,7 +790,7 @@ $(document).ready(function () {
                         },
                         {
                             y: 0,
-                            duration: 0.8,
+                            duration: 0.4,
                             overwrite: true,
                             ease: Power2.easeOut,
                         }
