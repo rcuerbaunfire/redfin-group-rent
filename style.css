@@ -796,6 +796,18 @@ code {
   border-radius: 4px;
   overflow: hidden;
 }
+.blog-content .link-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.blog-content .link-block ._16px-inter-semibold.indigo-highlight.cta-aerial {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 .ff-box .cl-container-bg {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;

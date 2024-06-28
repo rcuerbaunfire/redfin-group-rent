@@ -891,6 +891,16 @@ code {
 		border-radius: 4px;
 		overflow: hidden;
 	}
+    
+    .link-block {
+        display: flex;
+        align-items: center;
+        
+        ._16px-inter-semibold.indigo-highlight.cta-aerial {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
 }
 
 .ff-box {
