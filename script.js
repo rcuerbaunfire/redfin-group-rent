@@ -1,6 +1,8 @@
 $(document).ready(function () {
     console.log('bf script init');
     const bodyEl = $("body");
+    
+    $("p, ._16px-intert-gray, .kf-stat-desc").unorphanize();
 
     function animatedTop() {
         const fadedElements = gsap.utils.toArray(".transition-top");
