@@ -824,5 +824,13 @@ code {
   display: flex;
 }
 .t-modal .t-modal-content::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
+}
+.t-modal .t-modal-content::-webkit-scrollbar-track {
+  background: #e7ebff;
+}
+.t-modal .t-modal-content::-webkit-scrollbar-thumb {
+  background-color: #4561ec;
+  border-radius: 6px;
+  border: 3px solid #e7ebff;
 }
