@@ -776,15 +776,15 @@ $(document).ready(function () {
 
                 if (!modalOpen.length) return;
                 const modalClose = member.find(".t-modal-close, .t-modal-overlay");
-                const modal = member.find(".t-modal");
+                const modal = member.find(".t-modal").first();
 
-                modalOpen.click(function() {
-                    modal.addClass("active");
+                modalOpen.click(function () {
+                    modal.showModal();
                     bodyEl.addClass("no-scroll");
                 });
 
-                modalClose.click(function() {
-                    modal.removeClass("active");
+                modalClose.click(function () {
+                    modal.close();
                     bodyEl.removeClass("no-scroll");
                 });
             })
