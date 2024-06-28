@@ -837,6 +837,6 @@ code {
   border: 3px solid #e7ebff;
 }
 
-.hash-tag p {
+.hash-tag, .hash-tag * {
   color: #000000 !important;
 }
