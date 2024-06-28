@@ -772,15 +772,16 @@ $(document).ready(function () {
 
             members.each(function () {
                 const member = $(this);
-                const modalOpen = member.find(".t-modal-open:not(.w-condition-invisible)");
+                const modal = member.find(".t-modal");
 
-                if (!modalOpen.length) return;
+                if (modal.hasClass('w-condition-invisible')) return;
+                
+                const modalOpen = member.find(".t-modal-open");
                 const modalClose = member.find(".t-modal-close, .t-modal-overlay");
-                const modal = member.find(".t-modal")[0];
                 const modalInner = member.find(".t-modal-inner");
 
                 modalOpen.click(function () {
-                    modal.showModal();
+                    modal[0].showModal();
                     bodyEl.addClass("no-scroll");
 
                     gsap.fromTo(modalInner,
@@ -790,6 +791,7 @@ $(document).ready(function () {
                         },
                         {
                             y: 0,
+                            autoAlpha: 1,
                             duration: 0.4,
                             overwrite: true,
                             ease: Power2.easeOut,
@@ -798,7 +800,7 @@ $(document).ready(function () {
                 });
 
                 modalClose.click(function () {
-                    modal.close();
+                    modal[0].close();
                     bodyEl.removeClass("no-scroll");
 
                     gsap.set(modalInner, {

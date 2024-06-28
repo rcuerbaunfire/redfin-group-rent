@@ -913,3 +913,9 @@ code {
 		justify-content: center;
 	}
 }
+
+.t-modal {
+	&[open] {
+		display: flex;
+	}
+}
