@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log('bf script init');
+    const bodyEl = $("body");
 
     function animatedTop() {
         const fadedElements = gsap.utils.toArray(".transition-top");
@@ -99,7 +100,6 @@ $(document).ready(function () {
 
         function preventScroll() {
             const trigger = $(".navbar_mob_btn");
-            const bodyEl = $("body");
 
             const mm = gsap.matchMedia();
 
@@ -780,10 +780,12 @@ $(document).ready(function () {
 
                 modalOpen.click(function() {
                     modal.addClass("active");
+                    bodyEl.addClass("no-scroll");
                 });
 
                 modalClose.click(function() {
                     modal.removeClass("active");
+                    bodyEl.removeClass("no-scroll");
                 });
             })
         })
