@@ -802,6 +802,8 @@ code {
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 .ff-box:hover .cl-container-bg {
   -webkit-transform: scale(1.1);
