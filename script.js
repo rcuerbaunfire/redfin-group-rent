@@ -762,6 +762,33 @@ $(document).ready(function () {
         });
     }
 
+    function teamModal() {
+        const container = $(".team-section");
+        if (!container.length) return;
+
+        container.each(function () {
+            const self = $(this);
+            const members = self.find(".t-item");
+
+            members.each(function () {
+                const member = $(this);
+                const modalOpen = member.find(".t-modal-open:not(.w-condition-invisible)");
+
+                if (!modalOpen.length) return;
+                const modalClose = member.find(".t-modal-close, .t-modal-overlay");
+                const modal = member.find(".t-modal");
+
+                modalOpen.click(function() {
+                    modal.addClass("active");
+                });
+
+                modalClose.click(function() {
+                    modal.removeClass("active");
+                });
+            })
+        })
+    }
+
     function packages() {
         const containers = $(".listing-package");
         if (!containers.length) return;
@@ -1248,5 +1275,6 @@ $(document).ready(function () {
     allResources();
     removeEmpties();
     blogCleanup();
+    teamModal();
     refresh(true);
 });
