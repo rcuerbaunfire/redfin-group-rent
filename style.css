@@ -826,12 +826,12 @@ code {
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-.t-modal.active {
+.t-modal[open] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.t-modal.active .t-modal-inner {
+.t-modal[open] .t-modal-inner {
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);

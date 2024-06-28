@@ -841,10 +841,10 @@ code {
 	h3,
 	h4,
 	h5,
-    h6 {
+	h6 {
 		font-weight: normal;
-        margin-top: 40px;
-        margin-bottom: 20px;
+		margin-top: 40px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -875,60 +875,60 @@ code {
 		}
 	}
 
-    .w-richtext figure.w-richtext-align-floatleft {
-        margin: 0 32px 0 0;
+	.w-richtext figure.w-richtext-align-floatleft {
+		margin: 0 32px 0 0;
 
-        img {
-            padding: 0;
-        }
+		img {
+			padding: 0;
+		}
 
-        @media only screen and (max-width: 990px) {
-            margin: 0 16px 0 0;
-        }
-    }
+		@media only screen and (max-width: 990px) {
+			margin: 0 16px 0 0;
+		}
+	}
 
-    img {
-        border-radius: 4px;
-        overflow: hidden;
-    }
+	img {
+		border-radius: 4px;
+		overflow: hidden;
+	}
 }
 
 .ff-box {
-    .cl-container-bg {
-        transition: transform 0.5s ease-in-out;
-        transform: scale(1);
-    }
+	.cl-container-bg {
+		transition: transform 0.5s ease-in-out;
+		transform: scale(1);
+	}
 
-    &:hover {
-        .cl-container-bg {
-            transform: scale(1.05);
-        }
-    }
+	&:hover {
+		.cl-container-bg {
+			transform: scale(1.05);
+		}
+	}
 }
 
 .gcta-container.is-nav.is-mob {
-    .global-cta {
-        width: 100%;
-        max-width: none;
-        justify-content: center;
-    }
+	.global-cta {
+		width: 100%;
+		max-width: none;
+		justify-content: center;
+	}
 }
 
 .t-modal {
-    .t-modal-inner {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(30px);
-        transition: all 0.5s ease-out;
-    }
+	.t-modal-inner {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(30px);
+		transition: all 0.5s ease-out;
+	}
 
-    &.active {
-        display: flex;
-        
-        .t-modal-inner {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-    }
+	&[open] {
+		display: flex;
+
+		.t-modal-inner {
+			opacity: 1;
+			visibility: visible;
+			transform: translateY(0);
+		}
+	}
 }
