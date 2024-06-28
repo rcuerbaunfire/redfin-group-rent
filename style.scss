@@ -892,3 +892,15 @@ code {
         overflow: hidden;
     }
 }
+
+.ff-box {
+    .cl-container-bg {
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    &:hover {
+        .cl-container-bg {
+            transform: scale(1.1);
+        }
+    }
+}

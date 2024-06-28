@@ -294,6 +294,7 @@ $(document).ready(function () {
                                 autoplay: true,
                                 muted: false,
                                 referrerpolicy: "origin",
+                                title: false
                             });
                         }).catch(function (error) {
                             console.error('Error unloading the player:', error);
