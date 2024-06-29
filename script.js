@@ -1,8 +1,6 @@
 $(document).ready(function () {
     console.log('bf script init');
     const bodyEl = $("body");
-    
-    $("p, ._16px-intert-gray, .kf-stat-desc").unorphanize();
 
     function animatedTop() {
         const fadedElements = gsap.utils.toArray(".transition-top");
@@ -777,7 +775,7 @@ $(document).ready(function () {
                 const modal = member.find(".t-modal");
 
                 if (modal.hasClass('w-condition-invisible')) return;
-                
+
                 const modalOpen = member.find(".t-modal-open");
                 const modalClose = member.find(".t-modal-close, .t-modal-overlay");
                 const modalInner = member.find(".t-modal-inner");
@@ -1279,6 +1277,17 @@ $(document).ready(function () {
         emptyElements.remove();
     }
 
+    function unorphanize() {
+        $("._16px-intert-gray, .kf-stat-desc").each(function () {
+            var wordArray = $(this).text().split(" ");
+            if (wordArray.length > 1) {
+                wordArray[wordArray.length - 2] += "&nbsp;" + wordArray[wordArray.length - 1];
+                wordArray.pop();
+                $(this).html(wordArray.join(" "));
+            }
+        });
+    }
+
     animatedFade();
     animatedTop();
     nav();
@@ -1300,5 +1309,6 @@ $(document).ready(function () {
     removeEmpties();
     blogCleanup();
     teamModal();
+    unorphanize();
     refresh(true);
 });
