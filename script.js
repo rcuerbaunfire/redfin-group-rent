@@ -1278,14 +1278,8 @@ $(document).ready(function () {
     }
 
     function unorphanize() {
-        $("._16px-intert-gray, .kf-stat-desc").each(function () {
-            var wordArray = $(this).text().split(" ");
-            if (wordArray.length > 1) {
-                wordArray[wordArray.length - 2] += "&nbsp;" + wordArray[wordArray.length - 1];
-                wordArray.pop();
-                $(this).html(wordArray.join(" "));
-            }
-        });
+        $("._16px-intert-gray, .kf-stat-desc").unorphanize();
+        $(".kf-stat-desc").unorphanize(2);
     }
 
     animatedFade();
