@@ -501,6 +501,25 @@ code {
 			}
 		}
 	}
+
+    .lp-cta {
+        &:hover {
+            .cta {
+                color: #4561ec !important;
+            }
+        }
+    }
+
+    .lp-arrow.t-bg {
+        &, svg circle, svg path {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .lp-arrow.t-bg:hover svg circle, 
+    .lp-arrow.t-bg:hover svg path {
+        stroke: white !important;
+    }
 }
 
 .about-cartd-description,
@@ -963,13 +982,5 @@ code {
 .hash-tag {
     &, & * {
         color: #000000 !important;
-    }
-}
-
-.lp-cta {
-    &:hover {
-        .cta {
-            color: #4561ec !important;
-        }
     }
 }

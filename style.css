@@ -468,6 +468,17 @@ code {
   top: 1px;
   position: relative;
 }
+.lp-item .lp-cta:hover .cta {
+  color: #4561ec !important;
+}
+.lp-item .lp-arrow.t-bg, .lp-item .lp-arrow.t-bg svg circle, .lp-item .lp-arrow.t-bg svg path {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.lp-item .lp-arrow.t-bg:hover svg circle,
+.lp-item .lp-arrow.t-bg:hover svg path {
+  stroke: white !important;
+}
 
 .about-cartd-description,
 .two-line-text {
@@ -859,8 +870,4 @@ code {
 
 .hash-tag, .hash-tag * {
   color: #000000 !important;
-}
-
-.lp-cta:hover .cta {
-  color: #4561ec !important;
 }
