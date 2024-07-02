@@ -470,6 +470,7 @@ code {
 }
 .lp-item .lp-cta:hover .cta {
   color: #4561ec !important;
+  background-image: url("https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664faa2a8ba0b955ed6066cb_Group%20422.svg");
 }
 .lp-item .lp-arrow.t-bg, .lp-item .lp-arrow.t-bg svg circle, .lp-item .lp-arrow.t-bg svg path {
   -webkit-transition: all 0.3s ease-in-out;
