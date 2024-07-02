@@ -599,7 +599,7 @@ $(document).ready(function () {
 
             const timeline = gsap.timeline({
                 defaults: {
-                    ease: Power3.easeOut,
+                    ease: Power2.easeOut,
                     overwrite: true
                 }
             });
@@ -634,7 +634,7 @@ $(document).ready(function () {
                     {
                         height: "auto",
                         duration: 0.6,
-                        stagger: 0.2
+                        stagger: 0.24
                     },
                     "<0.7"
                 )
