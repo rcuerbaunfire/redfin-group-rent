@@ -634,7 +634,7 @@ $(document).ready(function () {
                     {
                         height: "auto",
                         duration: 0.6,
-                        stagger: 0.24
+                        stagger: 0.3
                     },
                     "<0.7"
                 )
