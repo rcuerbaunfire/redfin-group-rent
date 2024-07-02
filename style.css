@@ -481,8 +481,10 @@ code {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.lp-item .lp-arrow.t-bg svg,
-.lp-item .lp-arrow svg {
+.lp-item .lp-arrow.t-bg:hover svg,
+.lp-item .lp-arrow.t-bg:hover svg,
+.lp-item .lp-arrow:hover svg,
+.lp-item .lp-arrow:hover svg {
   fill: #4561ec;
 }
 .lp-item .lp-arrow.t-bg:hover svg circle,

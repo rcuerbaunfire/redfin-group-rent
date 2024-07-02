@@ -518,10 +518,13 @@ code {
 		svg path {
 			transition: all 0.3s ease-in-out;
 		}
+	}
 
-        svg {
-            fill: #4561ec;
-        }
+    .lp-arrow.t-bg:hover svg,
+	.lp-arrow.t-bg:hover svg,
+	.lp-arrow:hover svg,
+	.lp-arrow:hover svg {
+        fill: #4561ec;
 	}
 
 	.lp-arrow.t-bg:hover svg circle,
