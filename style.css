@@ -488,8 +488,10 @@ code {
   fill: #4561ec;
 }
 .lp-item .lp-arrow.t-bg:hover svg circle,
+.lp-item .lp-arrow:hover svg circle {
+  stroke: #4561ec !important;
+}
 .lp-item .lp-arrow.t-bg:hover svg path,
-.lp-item .lp-arrow:hover svg circle,
 .lp-item .lp-arrow:hover svg path {
   stroke: white !important;
 }

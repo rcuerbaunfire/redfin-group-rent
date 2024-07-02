@@ -527,9 +527,12 @@ code {
         fill: #4561ec;
 	}
 
-	.lp-arrow.t-bg:hover svg circle,
+    .lp-arrow.t-bg:hover svg circle,
+	.lp-arrow:hover svg circle {
+		stroke: #4561ec !important;
+	}
+
 	.lp-arrow.t-bg:hover svg path,
-	.lp-arrow:hover svg circle,
 	.lp-arrow:hover svg path {
 		stroke: white !important;
 	}
