@@ -877,3 +877,7 @@ code {
 .hash-tag, .hash-tag * {
   color: #000000 !important;
 }
+
+.tag p {
+  margin: 0 !important;
+}
