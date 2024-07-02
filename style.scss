@@ -511,14 +511,14 @@ code {
         }
     }
 
-    .lp-arrow.t-bg {
+    .lp-arrow {
         &, svg circle, svg path {
             transition: all 0.3s ease-in-out;
         }
     }
 
-    .lp-arrow.t-bg:hover svg circle, 
-    .lp-arrow.t-bg:hover svg path {
+    .lp-arrow:hover svg circle, 
+    .lp-arrow:hover svg path {
         stroke: white !important;
     }
 }
