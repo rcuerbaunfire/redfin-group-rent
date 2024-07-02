@@ -472,10 +472,15 @@ code {
   color: #4561ec !important;
   background-image: url("https://cdn.prod.website-files.com/664bb28e4eaef6676bc7f01a/664faa2a8ba0b955ed6066cb_Group%20422.svg");
 }
-.lp-item .lp-arrow, .lp-item .lp-arrow svg circle, .lp-item .lp-arrow svg path {
+.lp-item .lp-arrow.t-bg, .lp-item .lp-arrow.t-bg svg circle, .lp-item .lp-arrow.t-bg svg path,
+.lp-item .lp-arrow,
+.lp-item .lp-arrow svg circle,
+.lp-item .lp-arrow svg path {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+.lp-item .lp-arrow.t-bg:hover svg circle,
+.lp-item .lp-arrow.t-bg:hover svg path,
 .lp-item .lp-arrow:hover svg circle,
 .lp-item .lp-arrow:hover svg path {
   stroke: white !important;
