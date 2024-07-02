@@ -1279,7 +1279,7 @@ $(document).ready(function () {
 
     function unorphanize() {
         $("._16px-intert-gray, .kf-stat-desc").unorphanize();
-        $(".kf-stat-desc").unorphanize(2);
+        $(".kf-stat-desc").unorphanize(1);
     }
 
     animatedFade();
