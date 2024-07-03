@@ -997,6 +997,10 @@ code {
 	}
 
 	.t-modal-content {
+        p {
+            margin: 0;
+        }
+        
 		&::-webkit-scrollbar {
 			width: 10px;
 			border-radius: 20px;
