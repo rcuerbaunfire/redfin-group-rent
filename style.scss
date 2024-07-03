@@ -1009,8 +1009,13 @@ code {
 }
 
 .ev-content {
-    a:hover {
-        color: #7E93FB;
+    a {
+        transition: color .3s;
+
+        &:hover {
+            transition: color .3s;
+            color: #7E93FB;
+        }
     }
 }
 
