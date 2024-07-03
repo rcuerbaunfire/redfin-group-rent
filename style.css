@@ -779,6 +779,12 @@ code {
 .ar-collection.is-feature .owl-stage-outer {
   overflow: hidden;
 }
+.ar-collection .tes-items.owl-carousel.is-ar {
+  overflow: hidden;
+}
+.ar-collection .tes-items.owl-carousel.is-ar.owl-loaded {
+  overflow: visible;
+}
 
 .cell-31 .light-bg {
   border-top-right-radius: 4px;

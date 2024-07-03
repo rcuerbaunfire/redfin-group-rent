@@ -880,6 +880,14 @@ code {
             overflow: hidden;
         }
     }
+
+    .tes-items.owl-carousel.is-ar {
+        overflow: hidden;
+
+        &.owl-loaded {
+            overflow: visible;
+        }
+    }
 }
 
 .cell-31 .light-bg {
