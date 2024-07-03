@@ -891,3 +891,7 @@ code {
 .tag p {
   margin: 0 !important;
 }
+
+.c-box a:hover {
+  color: #7E93FB;
+}
