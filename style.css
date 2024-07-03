@@ -773,6 +773,13 @@ code {
   content: none !important;
 }
 
+.ar-collection.is-feature::after {
+  content: none;
+}
+.ar-collection.is-feature .owl-stage-outer {
+  overflow: hidden;
+}
+
 .cell-31 .light-bg {
   border-top-right-radius: 4px;
   overflow: hidden;
