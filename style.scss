@@ -968,6 +968,10 @@ code {
 			padding-right: 0;
 		}
 	}
+
+    strong, b {
+        font-weight: unset;
+    }
 }
 
 .ff-box {
