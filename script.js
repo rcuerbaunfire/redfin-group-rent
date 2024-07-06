@@ -899,7 +899,7 @@ $(document).ready(function () {
                         duration: 0.6,
                         ease: Power2.easeOut,
                     },
-                    "<0.4"
+                    "<0.3"
                 )
                 .to(
                     heroRight,
@@ -909,7 +909,7 @@ $(document).ready(function () {
                         duration: 0.8,
                         ease: Power2.easeOut
                     },
-                    "<0.4"
+                    "<0.3"
                 )
         })
     }
