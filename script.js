@@ -885,7 +885,7 @@ $(document).ready(function () {
                         autoAlpha: 1,
                         duration: 0.6,
                         ease: Power2.easeOut,
-                        stagger: 0.4,
+                        stagger: 0.3,
                     }
                 )
                 .to(
@@ -896,7 +896,7 @@ $(document).ready(function () {
                         duration: 0.8,
                         ease: Power2.easeOut
                     },
-                    "<0.2"
+                    "<0.4"
                 )
         })
     }
