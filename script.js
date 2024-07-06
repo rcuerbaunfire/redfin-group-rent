@@ -869,17 +869,22 @@ $(document).ready(function () {
             const self = $(this);
             const heroRight = self.find(".hero-right-container");
             const heroLeft = self.find(".hero-left-container");
+            const heroLeftGroup1 = self.find(".richtext-heading");
+            const heroLeftGroup2 = self.find(".get-started-slider");
 
             gsap.timeline()
                 .fromTo(
-                    heroLeft,
+                    [heroLeftGroup1, heroLeftGroup2],
                     {
                         autoAlpha: 0,
+                        y: 20,
                     },
                     {
+                        y: 0,
                         autoAlpha: 1,
                         duration: 0.6,
-                        ease: Power2.easeOut
+                        ease: Power2.easeOut,
+                        stagger: 0.4,
                     }
                 )
                 .to(
