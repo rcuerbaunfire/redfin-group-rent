@@ -800,12 +800,24 @@ $(document).ready(function () {
                 });
 
                 modalClose.click(function () {
-                    modal[0].close();
-                    bodyEl.removeClass("no-scroll");
-
-                    gsap.set(modalInner, {
-                        clearProps: true
-                    });
+                    gsap.fromTo(modalInner,
+                        {
+                            autoAlpha: 1,
+                        },
+                        {
+                            autoAlpha: 0,
+                            duration: 0.3,
+                            overwrite: true,
+                            ease: Power2.easeOut,
+                            onComplete: () => {
+                                gsap.set(modalInner, {
+                                    clearProps: true
+                                });
+                                modal[0].close();
+                                bodyEl.removeClass("no-scroll");
+                            }
+                        }
+                    );
                 });
             })
         })
