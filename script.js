@@ -869,7 +869,7 @@ $(document).ready(function () {
             const self = $(this);
             const heroRight = self.find(".hero-right-container");
             const heroLeft = self.find(".hero-left-container");
-            const heroLeftGroup1 = self.find(".richtext-heading");
+            const heroLeftGroup1 = self.find(".richtext-heading, .text-block.is-hero");
             const heroLeftGroup2 = self.find(".get-started-slider");
 
             gsap.timeline()
