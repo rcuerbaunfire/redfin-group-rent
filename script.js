@@ -874,7 +874,7 @@ $(document).ready(function () {
 
             gsap.timeline()
                 .fromTo(
-                    [heroLeftGroup1, heroLeftGroup2],
+                    heroLeftGroup1,
                     {
                         autoAlpha: 0,
                         y: 20,
@@ -885,8 +885,22 @@ $(document).ready(function () {
                         autoAlpha: 1,
                         duration: 0.6,
                         ease: Power2.easeOut,
-                        stagger: 0.3,
                     }
+                )
+                .fromTo(
+                    heroLeftGroup2,
+                    {
+                        autoAlpha: 0,
+                        y: 20,
+                    },
+                    {
+                        delay: 0.4,
+                        y: 0,
+                        autoAlpha: 1,
+                        duration: 0.6,
+                        ease: Power2.easeOut,
+                    },
+                    "<0.4"
                 )
                 .to(
                     heroRight,
