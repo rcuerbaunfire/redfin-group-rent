@@ -880,6 +880,7 @@ $(document).ready(function () {
                         y: 20,
                     },
                     {
+                        delay: 0.4,
                         y: 0,
                         autoAlpha: 1,
                         duration: 0.6,
