@@ -962,7 +962,7 @@ $(document).ready(function () {
                         });
 
                         if (!self.hasClass("owl-loaded")) {
-                            const resMobContainer = $("<div class='res-mob-carousel owl-carousel'></div>");
+                            const resMobContainer = $("<div class='res-mob-carousel mres-items owl-carousel'></div>");
                             items.clone().appendTo(resMobContainer);
                             resMobContainer.appendTo(itemsContainer);
                             

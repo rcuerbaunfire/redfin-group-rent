@@ -74,8 +74,11 @@ h6 {
 	}
 }
 
-.res-items .owl-stage {
-	display: flex;
+.res-items,
+.mres-items {
+	.owl-stage {
+		display: flex;
+	}
 }
 
 .tes-items,
@@ -91,6 +94,7 @@ h6 {
 }
 
 .res-items,
+.mres-items,
 .sol-items,
 .fc-items,
 .sh-items,
@@ -105,6 +109,7 @@ h6 {
 
 .sol-items,
 .res-items,
+.mres-items,
 .fc-items,
 .lp-items {
 	.owl-dots {
@@ -118,6 +123,7 @@ h6 {
 
 .fc-items,
 .res-items,
+.mres-items,
 .sol-items,
 .sh-items,
 .lp-items,
@@ -182,7 +188,8 @@ h6 {
 
 .res-items,
 .fc-items,
-.ar-items {
+.ar-items,
+.mres-items {
 	.owl-dot:not(.active) {
 		background: #adbbff;
 	}
@@ -520,14 +527,14 @@ code {
 		}
 	}
 
-    .lp-arrow.t-bg:hover svg,
+	.lp-arrow.t-bg:hover svg,
 	.lp-arrow.t-bg:hover svg,
 	.lp-arrow:hover svg,
 	.lp-arrow:hover svg {
-        fill: #4561ec;
+		fill: #4561ec;
 	}
 
-    .lp-arrow.t-bg:hover svg circle,
+	.lp-arrow.t-bg:hover svg circle,
 	.lp-arrow:hover svg circle {
 		stroke: #4561ec !important;
 	}
@@ -871,23 +878,23 @@ code {
 }
 
 .ar-collection {
-    &.is-feature {
-        &::after {
-            content: none;
-        }
+	&.is-feature {
+		&::after {
+			content: none;
+		}
 
-        .owl-stage-outer {
-            overflow: hidden;
-        }
-    }
+		.owl-stage-outer {
+			overflow: hidden;
+		}
+	}
 
-    .tes-items.owl-carousel.is-ar {
-        overflow: hidden;
+	.tes-items.owl-carousel.is-ar {
+		overflow: hidden;
 
-        &.owl-loaded {
-            overflow: visible;
-        }
-    }
+		&.owl-loaded {
+			overflow: visible;
+		}
+	}
 }
 
 .cell-31 .light-bg {
@@ -969,9 +976,10 @@ code {
 		}
 	}
 
-    strong, b {
-        font-weight: unset;
-    }
+	strong,
+	b {
+		font-weight: unset;
+	}
 }
 
 .ff-box {
@@ -1001,10 +1009,10 @@ code {
 	}
 
 	.t-modal-content {
-        p {
-            margin: 0;
-        }
-        
+		p {
+			margin: 0;
+		}
+
 		&::-webkit-scrollbar {
 			width: 10px;
 			border-radius: 20px;
@@ -1037,13 +1045,12 @@ code {
 }
 
 .ev-content {
-    a {
-        transition: color .3s;
+	a {
+		transition: color 0.3s;
 
-        &:hover {
-            transition: color .3s;
-            color: #7E93FB;
-        }
-    }
+		&:hover {
+			transition: color 0.3s;
+			color: #7e93fb;
+		}
+	}
 }
-

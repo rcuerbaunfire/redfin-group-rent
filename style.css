@@ -87,7 +87,8 @@ html * {
   display: none;
 }
 
-.res-items .owl-stage {
+.res-items .owl-stage,
+.mres-items .owl-stage {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,6 +112,7 @@ html * {
 }
 
 .res-items .owl-dots,
+.mres-items .owl-dots,
 .sol-items .owl-dots,
 .fc-items .owl-dots,
 .sh-items .owl-dots,
@@ -127,6 +129,7 @@ html * {
 
 .sol-items .owl-dots,
 .res-items .owl-dots,
+.mres-items .owl-dots,
 .fc-items .owl-dots,
 .lp-items .owl-dots {
   width: calc(100% - 182px);
@@ -134,6 +137,7 @@ html * {
 @media only screen and (max-width: 767px) {
   .sol-items .owl-dots,
   .res-items .owl-dots,
+  .mres-items .owl-dots,
   .fc-items .owl-dots,
   .lp-items .owl-dots {
     width: calc(100% - 112px);
@@ -142,6 +146,7 @@ html * {
 
 .fc-items .owl-dot,
 .res-items .owl-dot,
+.mres-items .owl-dot,
 .sol-items .owl-dot,
 .sh-items .owl-dot,
 .lp-items .owl-dot,
@@ -156,6 +161,7 @@ html * {
 }
 .fc-items .owl-dot.active,
 .res-items .owl-dot.active,
+.mres-items .owl-dot.active,
 .sol-items .owl-dot.active,
 .sh-items .owl-dot.active,
 .lp-items .owl-dot.active,
@@ -199,7 +205,8 @@ html * {
 
 .res-items .owl-dot:not(.active),
 .fc-items .owl-dot:not(.active),
-.ar-items .owl-dot:not(.active) {
+.ar-items .owl-dot:not(.active),
+.mres-items .owl-dot:not(.active) {
   background: #adbbff;
 }
 
@@ -856,7 +863,8 @@ code {
   padding-left: 0;
   padding-right: 0;
 }
-.blog-content strong, .blog-content b {
+.blog-content strong,
+.blog-content b {
   font-weight: unset;
 }
 
@@ -918,5 +926,5 @@ code {
 .ev-content a:hover {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
-  color: #7E93FB;
+  color: #7e93fb;
 }
