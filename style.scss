@@ -1062,6 +1062,18 @@ code {
     padding-top: 44px;
 }
 
+@media only screen and (max-width: 990px) {
+	.res-collection-contaiiner {
+		display: flex;
+        flex-direction: column;
+
+        .res-cards {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+	}
+}
+
 @media only screen and (max-width: 767px) {
 	.res-collection-contaiiner {
 		.w-dyn-list {
