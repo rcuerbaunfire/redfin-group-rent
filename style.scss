@@ -1064,8 +1064,10 @@ code {
 
 @media only screen and (max-width: 990px) {
 	.res-collection-contaiiner {
-		display: flex;
+        display: flex;
         flex-direction: column;
+        padding-top: 44px;
+        gap: 25px;
 
         .res-cards {
             padding-top: 0;

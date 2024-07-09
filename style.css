@@ -947,6 +947,8 @@ code {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 44px;
+    gap: 25px;
   }
   .res-collection-contaiiner .res-cards {
     padding-top: 0;
