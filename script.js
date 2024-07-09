@@ -942,6 +942,7 @@ $(document).ready(function () {
         containers.each(function () {
             const self = $(this);
             const items = self.find(".res-items .w-dyn-item");
+            const itemsContainer = self.find(".res-collection-contaiiner");
 
             const mm = gsap.matchMedia();
             let carouselInstance = null;
@@ -961,16 +962,20 @@ $(document).ready(function () {
                         });
 
                         if (!self.hasClass("owl-loaded")) {
-                            // carouselInstance = self.owlCarousel({
-                            //     nav: true,
-                            //     navText: [leftArrow, rightArrow],
-                            //     items: 1,
-                            //     smartSpeed: 1000,
-                            //     loop: false,
-                            //     navRewind: false,
-                            //     dotsEach: true,
-                            //     margin: 16,
-                            // });
+                            const resMobContainer = $("<div class='res-mob-carousel'></div>");
+                            items.clone().appendTo(resMobContainer);
+                            resMobContainer.appendTo(itemsContainer);
+                            
+                            carouselInstance = resMobContainer.owlCarousel({
+                                nav: true,
+                                navText: [leftArrow, rightArrow],
+                                items: 1,
+                                smartSpeed: 1000,
+                                loop: false,
+                                navRewind: false,
+                                dotsEach: true,
+                                margin: 16,
+                            });
                         }
                     }
 
