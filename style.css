@@ -928,3 +928,9 @@ code {
   transition: color 0.3s;
   color: #7e93fb;
 }
+
+@media only screen and (max-width: 767px) {
+  .res-collection-contaiiner .w-dyn-list {
+    display: none;
+  }
+}

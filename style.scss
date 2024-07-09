@@ -1054,3 +1054,11 @@ code {
 		}
 	}
 }
+
+@media only screen and (max-width: 767px) {
+	.res-collection-contaiiner {
+		.w-dyn-list {
+			display: none;
+		}
+	}
+}
