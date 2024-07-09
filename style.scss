@@ -1057,6 +1057,9 @@ code {
 
 .res-mob-carousel {
     display: flex;
+    overflow: hidden;
+    padding-bottom: 50px;
+    padding-top: 44px;
 }
 
 @media only screen and (max-width: 767px) {
