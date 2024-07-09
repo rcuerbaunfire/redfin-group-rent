@@ -1055,6 +1055,10 @@ code {
 	}
 }
 
+.res-mob-carousel {
+    display: flex;
+}
+
 @media only screen and (max-width: 767px) {
 	.res-collection-contaiiner {
 		.w-dyn-list {
