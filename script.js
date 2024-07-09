@@ -402,46 +402,6 @@ $(document).ready(function () {
                     },
                 });
 
-            } else if (self.hasClass("res-items")) {
-                const mm = gsap.matchMedia();
-                let carouselInstance = null;
-
-                mm.add(
-                    {
-                        isDesktop: `(min-width: 768px)`,
-                        isMobile: `(max-width: 767px)`,
-                    },
-                    (context) => {
-                        let { isDesktop, isMobile } = context.conditions;
-
-                        if (isMobile) {
-                            if (!self.hasClass("owl-loaded")) {
-                                carouselInstance = self.owlCarousel({
-                                    nav: true,
-                                    navText: [leftArrow, rightArrow],
-                                    items: 1,
-                                    smartSpeed: 1000,
-                                    loop: false,
-                                    navRewind: false,
-                                    dotsEach: true,
-                                    margin: 16,
-                                });
-                            }
-                        }
-
-                        if (isDesktop) {
-                            if (carouselInstance) {
-                                carouselInstance.trigger(
-                                    "destroy.owl.carousel"
-                                );
-                                carouselInstance = null;
-                            }
-                        }
-
-                        return () => { };
-                    }
-                );
-
             } else if (self.hasClass("fc-items")) {
                 const mm = gsap.matchMedia();
                 let carouselInstance = null;
@@ -984,6 +944,7 @@ $(document).ready(function () {
             const items = self.find(".res-items .w-dyn-item");
 
             const mm = gsap.matchMedia();
+            let carouselInstance = null;
 
             mm.add(
                 {
@@ -998,6 +959,19 @@ $(document).ready(function () {
                             autoAlpha: 1,
                             y: 0,
                         });
+
+                        if (!self.hasClass("owl-loaded")) {
+                            // carouselInstance = self.owlCarousel({
+                            //     nav: true,
+                            //     navText: [leftArrow, rightArrow],
+                            //     items: 1,
+                            //     smartSpeed: 1000,
+                            //     loop: false,
+                            //     navRewind: false,
+                            //     dotsEach: true,
+                            //     margin: 16,
+                            // });
+                        }
                     }
 
                     if (isDesktop) {
@@ -1018,6 +992,14 @@ $(document).ready(function () {
                                 },
                             }
                         );
+
+
+                        if (carouselInstance) {
+                            carouselInstance.trigger(
+                                "destroy.owl.carousel"
+                            );
+                            carouselInstance = null;
+                        }
                     }
 
                     return () => { };
