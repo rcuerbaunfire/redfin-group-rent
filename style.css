@@ -935,7 +935,6 @@ code {
   display: flex;
   overflow: hidden;
   padding-bottom: 50px;
-  padding-top: 44px;
 }
 
 @media only screen and (max-width: 990px) {
