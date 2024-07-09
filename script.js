@@ -863,11 +863,18 @@ $(document).ready(function () {
                     heroLeftGroup2,
                     {
                         autoAlpha: 0,
+                        y: 20,
                     },
                     {
+                        y: 0,
                         autoAlpha: 1,
                         duration: 0.6,
                         ease: Power2.easeOut,
+                        onComplete: () => {
+                            gsap.set(heroLeftGroup2, {
+                                clearProps: "transform"
+                            });
+                        }
                     },
                     "<0.3"
                 )
