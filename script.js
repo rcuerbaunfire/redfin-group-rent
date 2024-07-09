@@ -965,7 +965,7 @@ $(document).ready(function () {
                             const resMobContainer = $("<div class='res-mob-carousel mres-items owl-carousel'></div>");
                             items.clone().appendTo(resMobContainer);
                             resMobContainer.appendTo(itemsContainer);
-                            
+
                             carouselInstance = resMobContainer.owlCarousel({
                                 nav: true,
                                 navText: [leftArrow, rightArrow],
@@ -980,6 +980,9 @@ $(document).ready(function () {
                     }
 
                     if (isDesktop) {
+                        const resMobContainer = self.find(".res-mob-carousel");
+                        if (resMobContainer.length) { resMobContainer.remove(); }
+
                         gsap.fromTo(items,
                             {
                                 autoAlpha: 0,
