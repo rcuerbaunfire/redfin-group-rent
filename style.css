@@ -863,9 +863,19 @@ code {
   padding-left: 0;
   padding-right: 0;
 }
-.blog-content strong,
-.blog-content b {
-  font-weight: unset;
+.blog-content h1 strong,
+.blog-content h1 b,
+.blog-content h2 strong,
+.blog-content h2 b,
+.blog-content h3 strong,
+.blog-content h3 b,
+.blog-content h4 strong,
+.blog-content h4 b,
+.blog-content h5 strong,
+.blog-content h5 b,
+.blog-content h6 strong,
+.blog-content h6 b {
+  font-weight: unset !important;
 }
 
 .ff-box .cl-container-bg {

@@ -976,9 +976,16 @@ code {
 		}
 	}
 
-	strong,
-	b {
-		font-weight: unset;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		strong,
+		b {
+			font-weight: unset !important;
+		}
 	}
 }
 
@@ -1056,23 +1063,23 @@ code {
 }
 
 .res-mob-carousel {
-    display: flex;
-    overflow: hidden;
-    padding-bottom: 50px;
-    position: relative;
+	display: flex;
+	overflow: hidden;
+	padding-bottom: 50px;
+	position: relative;
 }
 
 @media only screen and (max-width: 990px) {
 	.res-collection-contaiiner {
-        display: flex;
-        flex-direction: column;
-        padding-top: 44px;
-        gap: 25px;
+		display: flex;
+		flex-direction: column;
+		padding-top: 44px;
+		gap: 25px;
 
-        .res-cards {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
+		.res-cards {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 	}
 }
 
