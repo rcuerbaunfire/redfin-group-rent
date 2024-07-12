@@ -1090,3 +1090,9 @@ code {
 		}
 	}
 }
+
+@media screen and (max-width: 767px) {
+    .video-description-container {
+        display: grid !important;
+    }
+}
