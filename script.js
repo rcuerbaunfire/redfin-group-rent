@@ -288,6 +288,43 @@ $(document).ready(function () {
                     const globalCTA = self.find(".global-cta.vid-play");
                     const itemsToHide = self.find(".video-description-container, .video-overlay");
 
+                    const mm = gsap.matchMedia();
+
+                    mm.add(
+                        {
+                            isDesktop: `(min-width: 767px)`,
+                            isMobile: `(max-width: 766px)`,
+                        },
+                        (context) => {
+                            let { isDesktop, isMobile } = context.conditions;
+
+                            globalCTA.click(function () {
+                                player.destroy().then(function () {
+                                    if (isMobile) {
+                                        itemsToHide.fadeIn();
+                                    }
+
+                                    if (isDesktop) {
+                                        itemsToHide.fadeOut();
+                                    }
+
+                                    player = new Vimeo.Player(videoBox, {
+                                        id: videoID,
+                                        controls: true,
+                                        autoplay: true,
+                                        muted: false,
+                                        referrerpolicy: "origin",
+                                        title: false
+                                    });
+                                }).catch(function (error) {
+                                    console.error('Error unloading the player:', error);
+                                });
+                            })
+
+                            return () => { };
+                        }
+                    );
+
                     globalCTA.click(function () {
                         player.destroy().then(function () {
                             itemsToHide.fadeOut();
@@ -525,7 +562,6 @@ $(document).ready(function () {
                         return () => { };
                     }
                 );
-
 
 
             } else if (self.hasClass("ar-items")) {
