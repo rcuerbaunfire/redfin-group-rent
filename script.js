@@ -286,7 +286,7 @@ $(document).ready(function () {
                     });
                 } else {
                     const globalCTA = self.find(".global-cta.vid-play");
-                    const itemsToHide = self.find(".video-description-container, .video-overlay");
+                    const itemsToHide = self.find(".video-description-container, .video-overlay, .vid-play");
 
                     globalCTA.click(function () {
                         player.destroy().then(function () {
