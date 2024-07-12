@@ -814,6 +814,9 @@ code {
   margin-top: 40px;
   margin-bottom: 20px;
 }
+.blog-details code.indigo-highlight.gs-light {
+  font-weight: normal;
+}
 
 .blog-content div:empty,
 .blog-content p:empty {
