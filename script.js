@@ -235,12 +235,17 @@ $(document).ready(function () {
     }
 
     function handleVideo() {
-        const containers = $(".video-block, .hero");
-        if (!containers.length) return;
+        const allContainers = $(".video-block, .hero");
+        if (!allContainers.length) return;
 
         attachScript();
+        homeVideos();
+        otherVideos();
 
-        function loadVideos() {
+        function homeVideos() {
+            const containers = $(".hero");
+            if (!containers.length) return;
+
             containers.each(function () {
                 const self = $(this);
                 const videoID = self.find("#video-id").text();
@@ -284,30 +289,92 @@ $(document).ready(function () {
                     }).catch(function (error) {
                         console.error('Error getting video duration:', error);
                     });
-                } else {
-                    const globalCTA = self.find(".global-cta.vid-play");
-                    const itemsToHide = self.find(".video-description-container, .video-overlay, .vid-play");
+                }
+            });
+        }
 
-                    globalCTA.click(function () {
-                        player.destroy().then(function () {
-                            itemsToHide.fadeOut();
-                            player = new Vimeo.Player(videoBox, {
-                                id: videoID,
-                                controls: true,
-                                referrerpolicy: "origin",
-                                title: false
-                            });
+        function otherVideos() {
+            const containers = $(".video-block");
+            if (!containers.length) return;
 
-                            player.ready().then(() => {
-                                player.play().catch(error => {
+            containers.each(function () {
+                const self = $(this);
+                const videoID = self.find("#video-id").text();
+                const videoBoxDesktop = self.find(".vimeo-container.desktop");
+                const videoBoxMobile = self.find(".vimeo-container.mobile");
+
+                if (!videoID) return;
+
+                var playerDesktop = new Vimeo.Player(videoBoxDesktop, {
+                    id: videoID,
+                    controls: false,
+                    autoplay: true,
+                    muted: true,
+                    background: true,
+                    referrerpolicy: "origin",
+                    loop: true
+                });
+
+                var playerMobile = new Vimeo.Player(videoBoxMobile, {
+                    id: videoID,
+                    controls: true,
+                    autoplay: false,
+                    muted: false,
+                    referrerpolicy: "origin",
+                });
+
+                const globalCTA = self.find(".global-cta.vid-play");
+                const itemsToHide = self.find(".video-description-container, .video-overlay, .vid-play");
+
+                const mm = gsap.matchMedia();
+
+                mm.add(
+                    {
+                        isDesktop: `(min-width: 768px)`,
+                        isMobile: `(max-width: 767px)`,
+                    },
+                    (context) => {
+                        let { isDesktop, isMobile } = context.conditions;
+
+                        if (isDesktop) {
+                            playerMobile.pause();
+                        }
+
+                        if (isMobile) {
+                            playerDesktop.pause();
+                        }
+
+                        globalCTA.click(function () {
+                            if (isDesktop) {
+                                playerDesktop.destroy().then(function () {
+                                    itemsToHide.fadeOut();
+                                    playerDesktop = new Vimeo.Player(videoBoxDesktop, {
+                                        id: videoID,
+                                        controls: true,
+                                        referrerpolicy: "origin",
+                                        title: false,
+                                    });
+
+                                    playerDesktop.ready().then(() => {
+                                        playerDesktop.play().catch(error => {
+                                            console.error('Error playing the video:', error);
+                                        });
+                                    });
+                                }).catch(function (error) {
+                                    console.error('Error unloading the player:', error);
+                                });
+                            }
+
+                            if (isMobile) {
+                                playerMobile.play().catch(error => {
                                     console.error('Error playing the video:', error);
                                 });
-                            });
-                        }).catch(function (error) {
-                            console.error('Error unloading the player:', error);
+                            }
                         });
-                    })
-                }
+
+                        return () => { };
+                    }
+                );
             });
         }
 
