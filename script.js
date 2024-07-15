@@ -298,12 +298,12 @@ $(document).ready(function () {
             containers.each(function () {
                 const self = $(this);
                 const videoID = self.find("#video-id").text();
-                const videoBoxDesktop = self.find(".vimeo-container.desktop");
-                const videoBoxMobile = self.find(".vimeo-container.mobile");
+                const videoBoxFront = self.find(".vimeo-container.front");
+                const videoBoxBack = self.find(".vimeo-container.back");
 
                 if (!videoID) return;
 
-                var playerDesktop = new Vimeo.Player(videoBoxDesktop, {
+                var playerFront = new Vimeo.Player(videoBoxFront, {
                     id: videoID,
                     controls: false,
                     autoplay: true,
@@ -314,7 +314,7 @@ $(document).ready(function () {
                     title: false,
                 });
 
-                var playerMobile = new Vimeo.Player(videoBoxMobile, {
+                var playerBack = new Vimeo.Player(videoBoxBack, {
                     id: videoID,
                     controls: true,
                     autoplay: false,
@@ -326,55 +326,18 @@ $(document).ready(function () {
                 const globalCTA = self.find(".global-cta.vid-play");
                 const itemsToHide = self.find(".video-description-container, .video-overlay, .vid-play");
 
-                const mm = gsap.matchMedia();
+                globalCTA.click(function () {
+                    itemsToHide.fadeOut();
+                    
+                    videoBoxFront.fadeOut('400', function() {
+                        videoBoxFront.remove();
+                        playerFront.destroy();
+                    });
 
-                mm.add(
-                    {
-                        isDesktop: `(min-width: 768px)`,
-                        isMobile: `(max-width: 767px)`,
-                    },
-                    (context) => {
-                        let { isDesktop, isMobile } = context.conditions;
-
-                        if (isDesktop) {
-                            playerMobile.pause();
-                        }
-
-                        if (isMobile) {
-                            playerDesktop.pause();
-                        }
-
-                        globalCTA.click(function () {
-                            if (isDesktop) {
-                                playerDesktop.destroy().then(function () {
-                                    itemsToHide.fadeOut();
-                                    playerDesktop = new Vimeo.Player(videoBoxDesktop, {
-                                        id: videoID,
-                                        controls: true,
-                                        referrerpolicy: "origin",
-                                        title: false,
-                                    });
-
-                                    playerDesktop.ready().then(() => {
-                                        playerDesktop.play().catch(error => {
-                                            console.error('Error playing the video:', error);
-                                        });
-                                    });
-                                }).catch(function (error) {
-                                    console.error('Error unloading the player:', error);
-                                });
-                            }
-
-                            if (isMobile) {
-                                playerMobile.play().catch(error => {
-                                    console.error('Error playing the video:', error);
-                                });
-                            }
-                        });
-
-                        return () => { };
-                    }
-                );
+                    playerBack.play().catch(error => {
+                        console.error('Error playing the video:', error);
+                    });
+                });
             });
         }
 
