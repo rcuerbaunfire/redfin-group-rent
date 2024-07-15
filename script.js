@@ -328,12 +328,9 @@ $(document).ready(function () {
 
                 globalCTA.click(function () {
                     itemsToHide.fadeOut();
+                    videoBoxFront.remove();
+                    playerFront.destroy();
                     
-                    videoBoxFront.fadeOut('400', function() {
-                        videoBoxFront.remove();
-                        playerFront.destroy();
-                    });
-
                     playerBack.play().catch(error => {
                         console.error('Error playing the video:', error);
                     });
