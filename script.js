@@ -239,8 +239,6 @@ $(document).ready(function () {
         if (!allContainers.length) return;
 
         attachScript();
-        homeVideos();
-        otherVideos();
 
         function homeVideos() {
             const containers = $(".hero");
@@ -387,7 +385,8 @@ $(document).ready(function () {
             targetScriptTag.parentNode.insertBefore(tag, targetScriptTag);
 
             tag.onload = function () {
-                loadVideos();
+                homeVideos();
+                otherVideos();
             }
         }
     };
