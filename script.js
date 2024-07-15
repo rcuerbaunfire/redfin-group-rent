@@ -332,7 +332,7 @@ $(document).ready(function () {
                     videoBoxFront.fadeOut('400', function() {
                         videoBoxFront.remove();
                         playerFront.destroy();
-                        videoBoxBack.fadeIn();
+                        videoBoxBack.css("opacity", "100%");
                         
                         playerBack.play().catch(error => {
                             console.error('Error playing the video:', error);
