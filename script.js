@@ -330,7 +330,8 @@ $(document).ready(function () {
                     itemsToHide.fadeOut();
                     videoBoxFront.remove();
                     playerFront.destroy();
-                    
+                    playerBack.show();
+
                     playerBack.play().catch(error => {
                         console.error('Error playing the video:', error);
                     });
