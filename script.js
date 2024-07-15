@@ -294,10 +294,14 @@ $(document).ready(function () {
                             player = new Vimeo.Player(videoBox, {
                                 id: videoID,
                                 controls: true,
-                                autoplay: true,
-                                muted: false,
                                 referrerpolicy: "origin",
                                 title: false
+                            });
+
+                            player.ready().then(() => {
+                                player.play().catch(error => {
+                                    console.error('Error playing the video:', error);
+                                });
                             });
                         }).catch(function (error) {
                             console.error('Error unloading the player:', error);
