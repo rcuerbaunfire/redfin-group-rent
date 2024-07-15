@@ -310,7 +310,8 @@ $(document).ready(function () {
                     muted: true,
                     background: true,
                     referrerpolicy: "origin",
-                    loop: true
+                    loop: true,
+                    title: false,
                 });
 
                 var playerMobile = new Vimeo.Player(videoBoxMobile, {
@@ -319,6 +320,7 @@ $(document).ready(function () {
                     autoplay: false,
                     muted: false,
                     referrerpolicy: "origin",
+                    title: false,
                 });
 
                 const globalCTA = self.find(".global-cta.vid-play");
