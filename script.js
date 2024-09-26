@@ -329,11 +329,11 @@ $(document).ready(function () {
                 globalCTA.click(function () {
                     itemsToHide.fadeOut();
 
-                    videoBoxFront.fadeOut('400', function() {
+                    videoBoxFront.fadeOut('400', function () {
                         videoBoxFront.remove();
                         playerFront.destroy();
                         videoBoxBack.css("opacity", "100%");
-                        
+
                         playerBack.play().catch(error => {
                             console.error('Error playing the video:', error);
                         });
@@ -398,6 +398,10 @@ $(document).ready(function () {
                 if (self.children().length > 1) {
                     const carouselInstance = self.owlCarousel({
                         nav: true,
+                        mouseDrag: false,
+                        pullDrag: false,
+                        freeDrag: false,
+                        touchDrag: false,
                         smartSpeed: 1000,
                         items: 1,
                         loop: true,
@@ -427,6 +431,10 @@ $(document).ready(function () {
             } else if (self.hasClass("sol-items")) {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
+                    mouseDrag: false,
+                    pullDrag: false,
+                    freeDrag: false,
+                    touchDrag: false,
                     smartSpeed: 1000,
                     loop: false,
                     navRewind: false,
@@ -456,6 +464,10 @@ $(document).ready(function () {
                                 carouselInstance = self.owlCarousel({
                                     nav: true,
                                     items: 1,
+                                    mouseDrag: false,
+                                    pullDrag: false,
+                                    freeDrag: false,
+                                    touchDrag: false,
                                     smartSpeed: 1000,
                                     loop: false,
                                     navRewind: false,
@@ -484,6 +496,10 @@ $(document).ready(function () {
                     nav: true,
                     smartSpeed: 1000,
                     loop: false,
+                    mouseDrag: false,
+                    pullDrag: false,
+                    freeDrag: false,
+                    touchDrag: false,
                     navRewind: false,
                     dotsEach: true,
                     items: 1,
@@ -515,6 +531,10 @@ $(document).ready(function () {
                             if (!self.hasClass("owl-loaded")) {
                                 carouselInstance = self.owlCarousel({
                                     nav: true,
+                                    mouseDrag: false,
+                                    pullDrag: false,
+                                    freeDrag: false,
+                                    touchDrag: false,
                                     smartSpeed: 1000,
                                     loop: false,
                                     navRewind: false,
@@ -568,6 +588,10 @@ $(document).ready(function () {
                 const carouselInstance = self.owlCarousel({
                     nav: true,
                     autoWidth: true,
+                    mouseDrag: false,
+                    pullDrag: false,
+                    freeDrag: false,
+                    touchDrag: false,
                     smartSpeed: 1000,
                     loop: false,
                     items: 1,
@@ -1009,6 +1033,10 @@ $(document).ready(function () {
 
                             carouselInstance = resMobContainer.owlCarousel({
                                 nav: true,
+                                mouseDrag: false,
+                                pullDrag: false,
+                                freeDrag: false,
+                                touchDrag: false,
                                 navText: [leftArrow, rightArrow],
                                 items: 1,
                                 smartSpeed: 1000,
